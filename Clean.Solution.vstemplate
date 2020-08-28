@@ -1,0 +1,53 @@
+<VSTemplate Version="2.0.0" Type="ProjectGroup"
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Clean Architecture Solution Template</Name>
+    <Description>Clean architecture solution with all required projects</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType></ProjectSubType>
+	<LanguageTag>C#</LanguageTag>
+	<ProjectTypeTag>Web</ProjectTypeTag>
+    <SortOrder>100</SortOrder>
+    <CreateNewFolder>false</CreateNewFolder>
+    <DefaultName>{NAME}</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+    <TemplateContent>
+        <ProjectCollection>
+            <SolutionFolder Name="Presentation">
+                <ProjectTemplateLink ProjectName="$specifiedsolutionname$.Rest.Api" ReplaceParameters="true" CopyParameters="true">
+                    Presentation\Rest.Api\Rest.Api.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+            <SolutionFolder Name="Application">
+                <ProjectTemplateLink ProjectName="$specifiedsolutionname$.Application" ReplaceParameters="true" CopyParameters="true">
+                    Application\Application.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+            <SolutionFolder Name="Infrastructure">
+                <ProjectTemplateLink ProjectName="$specifiedsolutionname$.Infrastructure" ReplaceParameters="true" CopyParameters="true">
+                    Infrastructure\Infrastructure.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+            <SolutionFolder Name="Persistance">
+                <ProjectTemplateLink ProjectName="$specifiedsolutionname$.Persistance" ReplaceParameters="true" CopyParameters="true">
+                    Persistance\Persistance.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+            <SolutionFolder Name="Shared">
+                <ProjectTemplateLink ProjectName="$specifiedsolutionname$.Shared" ReplaceParameters="true" CopyParameters="true">
+                    Shared\Shared.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+            <SolutionFolder Name="Domain">
+                <ProjectTemplateLink ProjectName="$specifiedsolutionname$.Domain" ReplaceParameters="true" CopyParameters="true">
+                    Domain\Domain.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+        </ProjectCollection>
+    </TemplateContent>
+</VSTemplate>

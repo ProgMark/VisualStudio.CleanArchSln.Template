@@ -1,0 +1,40 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Rest.Api</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Rest.Api</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Rest.Api.csproj" File="Rest.Api.csproj" ReplaceParameters="true">
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="launchSettings.json">launchSettings.json</ProjectItem>
+      </Folder>
+      <Folder Name="Controllers" TargetFolderName="Controllers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Controller.cs">Controller.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Health" TargetFolderName="Health">
+        <ProjectItem ReplaceParameters="true" TargetFileName="HealthChecksRegistrationExtensions.cs">HealthChecksRegistrationExtensions.cs</ProjectItem>
+      </Folder>
+      <Folder Name="IOC" TargetFolderName="IOC">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ApiModule.cs">ApiModule.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="AutofacUtils.cs">AutofacUtils.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Settings" TargetFolderName="Settings">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ServiceSettings.cs">ServiceSettings.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="servicesettings.json">servicesettings.json</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Startup.cs">Startup.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

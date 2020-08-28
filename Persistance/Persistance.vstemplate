@@ -1,0 +1,28 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name></Name>
+    <Description>Clean architecture - Persistance project</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType></ProjectSubType>
+	<LanguageTag>C#</LanguageTag>
+	<ProjectTypeTag>Library</ProjectTypeTag>
+    <SortOrder>100</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>{NAME}.Persistance</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Persistance.csproj" File="Persistance.csproj" ReplaceParameters="true">
+      <Folder Name="Repositories" TargetFolderName="Repositories">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Repository.cs">Repository.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Registration" TargetFolderName="Registration">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Registration.cs">Registration.cs</ProjectItem>
+    </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

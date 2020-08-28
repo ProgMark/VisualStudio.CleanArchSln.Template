@@ -1,0 +1,42 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Application</Name>
+    <Description>Clean architecture - Application project</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType></ProjectSubType>
+	<LanguageTag>C#</LanguageTag>
+	<ProjectTypeTag>Library</ProjectTypeTag>
+    <SortOrder>100</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>{NAME}.Application</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Application.csproj" File="Application.csproj" ReplaceParameters="true">
+      <Folder Name="Domain/Commands/SampleCommand/V1" TargetFolderName="Domain/Commands/SampleCommand/V1">
+        <ProjectItem ReplaceParameters="true" TargetFileName="SampleCommandV1.cs">SampleCommandV1.cs</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="SampleCommandV1Handler.cs">SampleCommandV1Handler.cs</ProjectItem>
+      </Folder>
+	  <Folder Name="Domain/Queries/SampleQuery/V1" TargetFolderName="Domain/Queries/SampleQuery/V1">
+		<ProjectItem ReplaceParameters="true" TargetFileName="SampleDtoV1.cs">SampleDtoV1.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SampleQueryV1.cs">SampleQueryV1.cs</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="SampleQueryV1Handler.cs">SampleQueryV1Handler.cs</ProjectItem>
+      </Folder>
+	  <Folder Name="Interfaces/Databases" TargetFolderName="Interfaces/Databases">
+		<ProjectItem ReplaceParameters="true" TargetFileName="IRepository.cs">IRepository.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="DataBaseException.cs">DataBaseException.cs</ProjectItem>
+      </Folder>
+	  <Folder Name="Interfaces/Services" TargetFolderName="Interfaces/Services">
+		<ProjectItem ReplaceParameters="true" TargetFileName="IService.cs">IService.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ServiceException.cs">ServiceException.cs</ProjectItem>
+      </Folder>
+    <Folder Name="Registration" TargetFolderName="Registration">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Registration.cs">Registration.cs</ProjectItem>
+    </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
